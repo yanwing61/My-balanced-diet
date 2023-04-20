@@ -1,0 +1,117 @@
+/* using google web font */
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+/* styling for the page */
+body{
+    padding: 2em;
+    font-family: 'Rowdies', cursive;
+    font-weight: 300;
+    color: #3c3c3c;
+    background-image: url(../image/foodbg3.jpeg);
+    /* Image Designed by Bimbimkha / Freepik */
+    background-size: 100vw 100vh; 
+}
+
+main, footer{
+    background-color: #fffffff6;
+    padding: 2em;
+}
+
+#copyright{
+    padding: 2em;
+}
+
+h1{
+    font-weight: 700;
+    color: #ff6b1c;
+    font-size: 2.5em;
+}
+
+#todayDate, #day{
+    font-weight: 400;
+    color: #ff6b1c;
+    font-size: 1.5em;
+}
+
+/* used flexbox for the div for each day */
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.item{
+    border: 3px solid #FFBF69 ;
+    background-color: #FFF;
+    min-width: 150px;
+    min-height: 200px;
+    text-align: center;
+}
+
+.item p{
+    color: #ff6b1c;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+/* hiding the form when the page loads */
+#foodForm{
+    display: none;
+}
+
+/* Monday was prefilled as an */
+#monMealvege{
+    background-color: #2EC4B6;
+}
+
+#monMealmeat{
+    background-color: pink;
+}
+
+#monMealcarbs{
+    background-color: #FFED66;
+}
+
+#vege{
+    border-color: #2EC4B6;
+    border-style: solid;
+}
+
+#meat{
+    border-color: pink;
+    border-style: solid;
+}
+
+#carbs{
+    border-color: #FFED66;
+    border-style: solid;
+}
+
+.mealVege, .mealMeat, .mealCarbs{
+    padding: 5px;
+}
+
+.mealCarbs{
+    margin-bottom: 1em;
+}
+
+#submit{
+    margin-top: 1em;
+}
+
+button{
+    padding: 5px 10px;
+    background-color: #FFBF69;
+    border-width: 0;
+    border-radius: 10px;
+    font-family: 'Rowdies', cursive;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+footer{
+    position: relative;
+    top: 95%;
+    padding: 20px 0;
+}

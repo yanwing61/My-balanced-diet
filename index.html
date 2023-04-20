@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Pet Project - My Balanced Diet</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="petproject.js"></script>
+</head>
+
+<body>
+<main>
+<h1>Plan your meal here!</h1>
+<p>Today's date: <span id="todayDate"></span> </p>
+<p>Note: Sat & Sun are currently not available.</p>
+<br>
+<!-- short descriptive text for the use of this website. -->
+<p>Click buttons below for meal planning. Select the ingredients you want to cook for that day then submit.</p>
+
+<!-- each div equal one day, for outputting the user choices and the button for planning-->
+<div id="week" class="container">
+
+    <div class="item" id="Monday"><p>Mon</p> 
+      <!-- Monday was prefilled as an example -->
+      <div id="monMealvege" class="mealVege">Onion</div>
+      <div id="monMealmeat" class="mealMeat">Lamb</div>
+      <div id="monMealcarbs" class="mealCarbs">Noodle</div>
+      <button type="button" id="monButton">Change your plan</button>
+    </div>
+    <div class="item" id="Tuesday"><p>Tue</p>
+      <div id="tueMealvege" class="mealVege"></div>
+      <div id="tueMealmeat" class="mealMeat"></div>
+      <div id="tueMealcarbs" class="mealCarbs"></div>
+      <button type="button" id="tueButton">Start Planning</button>
+    </div>
+    <div class="item" id="Wednesday"><p>Wed</p>
+      <div id="wedMealvege" class="mealVege"></div>
+      <div id="wedMealmeat" class="mealMeat"></div>
+      <div id="wedMealcarbs" class="mealCarbs"></div>
+      <button type="button" id="wedButton">Start Planning</button>
+    </div>
+    <div class="item" id="Thursday"><p>Thu</p>
+      <div id="thuMealvege" class="mealVege"></div>
+      <div id="thuMealmeat" class="mealMeat"></div>
+      <div id="thuMealcarbs" class="mealCarbs"></div>
+      <button type="button" id="thuButton">Start Planning</button>
+    </div>
+    <div class="item" id="Friday"><p>Fri</p>
+      <div id="friMealvege" class="mealVege"></div>
+      <div id="friMealmeat" class="mealMeat"></div>
+      <div id="friMealcarbs" class="mealCarbs"></div>
+      <button type="button" id="friButton">Start Planning</button>
+    </div>
+  </div>
+    
+<!-- the form for user to input their choice. it is hidden when the page loads, until the user click on the buttons. -->
+<form method="post" id="foodForm" name="foodForm">
+  <p>What do you want for <span id="day"></span>?</p>
+  <fieldset id="vege">
+    <legend>Vege</legend>
+      <div>
+      <input type="radio" id="saladmix" name="vege" value="Salad Mix">
+      <label for="saladmix">Salad Mix</label>
+      </div>
+      <div>
+      <input type="radio" id="spinach" name="vege" value="Spinach">
+      <label for="spinach">Spinach</label>
+      </div>
+      <div>
+      <input type="radio" id="okra" name="vege" value="Okra">
+      <label for="okra">Okra</label>
+      </div>
+      <div>
+      <input type="radio" id="onion" name="vege" value="Onion">
+      <label for="onion">Onion</label>
+      </div>
+  </fieldset>
+  <fieldset id="meat">
+    <legend>Meat</legend>
+      <div>
+      <input type="radio" id="chicken" name="meat" value="Chicken">
+      <label for="chicken">Chicken</label>
+      </div>
+      <div>
+      <input type="radio" id="beef" name="meat" value="Beef">
+      <label for="beef">Beef</label>
+      </div>
+      <div>
+      <input type="radio" id="pork" name="meat" value="Pork">
+      <label for="pork">Pork</label>
+      </div>
+      <div>
+      <input type="radio" id="lamb" name="meat" value="Lamb">
+      <label for="lamb">Lamb</label>
+      </div>
+  </fieldset>
+  <fieldset id="carbs">
+    <legend>Carbs</legend>
+      <div>
+      <input type="radio" id="rice" name="carbs" value="Rice">
+      <label for="rice">Rice</label>
+      </div>
+      <div>
+      <input type="radio" id="noodle" name="carbs" value="Noodle">
+      <label for="noodle">Noodle</label>
+      </div>
+      <div>
+      <input type="radio" id="pasta" name="carbs" value="Pasta">
+      <label for="pasta">Pasta</label>
+      </div>
+      <div>
+      <input type="radio" id="bread" name="carbs" value="Bread">
+      <label for="bread">Bread</label>
+      </div>
+  </fieldset>
+  <button type="submit" id="submit">Submit</button>
+</form>
+</main>
+
+<!-- footer with copyright text -->
+<footer>
+  <div id="copyright">&copy; Copyright Yan Wing Pang, 2023.</div>
+</footer>
+
+</body>
+</html>
+
