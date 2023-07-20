@@ -6,8 +6,7 @@ Live site URL: <https://yanwing61.github.io/My-balanced-diet/>
 
 ## Feature
 
-- showing one week with only five days
-- one meal per day
+- showing one week with one meal per day
 - when the page is loaded, Monday is already pre-filled
 - the day according to the visiting date (e.g. 10 March is Friday) will be highlighted
 - click on the button of the day will direct the user to the form at the bottom, 
