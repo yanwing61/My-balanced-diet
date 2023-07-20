@@ -1,5 +1,5 @@
 
-// - showing one week with only five days
+// - showing one week
 // - one meal per day
 // - when the page is loaded, Monday is already pre-filled
 // - the day according to the visiting date (e.g. 10 March is Friday) will be highlighted
@@ -16,14 +16,16 @@ window.onload = function () {
     var wedButton = document.getElementById("wedButton");
     var thuButton = document.getElementById("thuButton");
     var friButton = document.getElementById("friButton");
+    var satButton = document.getElementById("satButton");
+    var sunButton = document.getElementById("sunButton");
     // store the buttons into an array
-    var buttons = [monButton, tueButton, wedButton, thuButton, friButton];
+    var buttons = [monButton, tueButton, wedButton, thuButton, friButton, satButton, sunButton];
 
     // buttonIndex was set to 0 as Monday is the prefilled example
     var buttonIndex = 0;
 
     // an array consist list of days 
-    var weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    var weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     
     // get two <span> to display the date and the day of the week
     var dayDisplay = document.getElementById("day");
@@ -75,14 +77,27 @@ window.onload = function () {
         carbsChoice: "",
     };
 
+    var satChoice = {
+        vegeChoice: "",
+        meatChoice: "",
+        carbsChoice: "",
+    };
+
+    var sunChoice = {
+        vegeChoice: "",
+        meatChoice: "",
+        carbsChoice: "",
+    };
+
+
     // store the 5 objects into an array
-    var choiceArray = [monChoice, tueChoice, wedChoice, thuChoice, friChoice];
+    var choiceArray = [monChoice, tueChoice, wedChoice, thuChoice, friChoice, satChoice, sunChoice];
 
     // display the date part of the timestamp
     todayDate.innerHTML = dateVar.toDateString();
 
     // the button of day according to the visiting date will be highlighted, with different background color and text
-    if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+    if (dayOfWeek >= 0 && dayOfWeek <= 7) {
       buttons[dayOfWeek-1].focus();
       buttons[dayOfWeek-1].style.background = "#ff6b1c";
       buttons[dayOfWeek-1].innerHTML = "Plan for TODAY";
