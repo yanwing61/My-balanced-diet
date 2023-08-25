@@ -97,12 +97,16 @@ window.onload = function () {
     todayDate.innerHTML = dateVar.toDateString();
 
     // the button of day according to the visiting date will be highlighted, with different background color and text
-    if (dayOfWeek >= 0 && dayOfWeek <= 7) {
-      buttons[dayOfWeek-1].focus();
-      buttons[dayOfWeek-1].style.background = "#ff6b1c";
-      buttons[dayOfWeek-1].innerHTML = "Plan for TODAY";
+    if (dayOfWeek >= 1 && dayOfWeek <= 6) {
+        buttons[dayOfWeek-1].focus();
+        buttons[dayOfWeek-1].style.background = "#ff6b1c";
+        buttons[dayOfWeek-1].innerHTML = "Plan for TODAY";
+    } else if (dayOfWeek === 0) { // Handle the case for Sunday
+        buttons[6].focus();
+        buttons[6].style.background = "#ff6b1c";
+        buttons[6].innerHTML = "Plan for TODAY";
     }
-
+    
     // when clicking on any of the button will enable displayForm function
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].onclick = displayForm;
